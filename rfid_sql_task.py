@@ -25,13 +25,6 @@ RFID_DATA = [
     {"tag_id": "54321", "timestamp": "2023-10-01T12:10:00", "location": "Warehouse C", "status": "inactive"}
 ]
 
-def fetch_all(cursor_):
-    # Query all data from the table
-    select_all_query = '''
-    SELECT * FROM rfid_entries;
-    '''
-    cursor.execute(select_all_query)
-    return cursor.fetchall()
 # Connect to SQLite database (or create it if it doesn't exist)
 conn = sqlite3.connect('rfid_database.db')
 
